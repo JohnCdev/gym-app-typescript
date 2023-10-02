@@ -8,9 +8,15 @@ import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
+import Paragraph from "@/shared/Paragraph";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
+};
+
+const container = {
+  hidden: { opacity: 1, x: -50 },
+  whileInView: { opacity: 1, x: 0 },
 };
 
 const Home = ({ setSelectedPage }: Props) => {
@@ -33,10 +39,7 @@ const Home = ({ setSelectedPage }: Props) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 1, x: -50 },
-              whileInView: { opacity: 1, x: 0 },
-            }}
+            variants={container}
           >
             <div className="relative">
               {/* content-evolvetext is from tailwinds config */}
@@ -44,12 +47,12 @@ const Home = ({ setSelectedPage }: Props) => {
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
-            <p className="mt-8 text-sm">
+            <Paragraph>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               distinctio, facilis laudantium iure quidem sed veniam cupiditate
               exercitationem, repudiandae, commodi ex omnis necessitatibus quia
               quaerat a architecto error ipsam.
-            </p>
+            </Paragraph>
           </motion.div>
           {/* Actions */}
           {/* Animations/framer motion does not work*/}
@@ -59,10 +62,7 @@ const Home = ({ setSelectedPage }: Props) => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 1, x: -50 },
-              whileInView: { opacity: 1, x: 0 },
-            }}
+            variants={container}
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Join Now
