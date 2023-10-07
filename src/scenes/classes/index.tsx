@@ -6,7 +6,7 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
-import Header from "@/shared/header";
+import Header from "@/shared/Header";
 import Paragraph from "@/shared/Paragraph";
 import { ClassType } from "@/shared/types";
 import Class from "./Class";

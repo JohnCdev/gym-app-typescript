@@ -1,5 +1,5 @@
 import Paragraph from "@/shared/Paragraph";
-import Header from "@/shared/header";
+import Header from "@/shared/Header";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";

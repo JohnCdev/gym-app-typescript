@@ -1,6 +1,5 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
 import { BenefitType, SelectedPage } from "@/shared/types";
-import Header from "@/shared/header";
+import Header from "@/shared/Header";
 import Paragraph from "@/shared/Paragraph";
 import ActionButton from "@/shared/ActionButton";
 import BenefitCard from "./BenefitCard";
@@ -45,8 +44,6 @@ type Props = {
 };
 
 const Benefits = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreenSize = useMediaQuery("(min-width: 1060px)");
-
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
